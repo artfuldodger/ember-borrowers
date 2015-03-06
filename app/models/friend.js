@@ -8,6 +8,8 @@ export default DS.Model.extend({
   twitter: DS.attr('string'),
   totalArticles: DS.attr('number'),
 
+  articles: DS.hasMany('article'),
+
   fullName: Ember.computed('firstName', 'lastName', function() {
     return this.get('firstName') + ' ' + this.get('lastName');
   })
