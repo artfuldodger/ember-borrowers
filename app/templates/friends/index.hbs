@@ -8,6 +8,7 @@
   {{#each model as |friend|}}
     <li>
       {{link-to friend.fullName 'friends.show' friend}}
+      [<a href="#" {{action "delete" friend}}>X</a>]
     </li>
   {{/each}}
 </ul>
