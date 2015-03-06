@@ -43,5 +43,9 @@ module.exports = function(environment) {
 
   }
 
+  ENV.contentSecurityPolicy = {
+    'connect-src': "'self' http://localhost:3000 http://api.ember-cli-101.com"
+  }
+
   return ENV;
 };
