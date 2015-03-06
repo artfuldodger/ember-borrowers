@@ -8,34 +8,13 @@
 <form {{action "save" on=submit}}>
   <h2>{{errorMessage}}</h2>
 
-  <div>
-    <label>
-      First Name:
-      {{input value=model.firstName}}
-    </label>
-  </div>
+  <fieldset>
+    {{input value=model.firstName placeholder='First Name'}}<br>
+    {{input value=model.lastName placeholder='Last Name'}}<br>
+    {{input value=model.email placeholder='Email'}}<br>
+    {{input value=model.twitter placeholder='Twitter'}}
+  </fieldset>
 
-  <div>
-    <label>
-      Last Name:
-      {{input value=model.lastName}}
-    </label>
-  </div>
-
-  <div>
-    <label>
-      Email:
-      {{input value=model.email}}
-    </label>
-  </div>
-
-  <div>
-    <label>
-      Twitter:
-      {{input value=model.twitter}}
-    </label>
-  </div>
-
-  <input {{action "save"}} type="submit" value="Save">
-  <button {{action "cancel"}}>Cancel</button>
+  <input {{action "save"}} type="submit" value="Save" class="primary">
+  <button {{action "cancel"}} class="dull">Cancel</button>
 </form>
