@@ -2,6 +2,8 @@
 
 <h2>There are {{model.length}} friends.</h2>
 
+{{link-to 'Add New' 'friends.new'}}
+
 <ul>
   {{#each model as |friend|}}
     <li>
