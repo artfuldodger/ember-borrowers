@@ -1,6 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  // If we leave the form before persisting the article,
+  // remove it from the store.
+  deactivate: function() {
+    var model = this.modelFor('articles/new');
+    model.destroyRecord();
+  },
+
   model: function() {
     return this.store.createRecord('article', {
       friend: this.modelFor('friends/show')
